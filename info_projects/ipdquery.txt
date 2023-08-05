@@ -1,0 +1,38 @@
+create table ipd_master(bht_no varchar(40) , p_bht_no varchar(50) , direct varchar(10) , pid_no varchar(30) , frm_opd varchar(30) , phn_no varchar(30) , 
+
+today varchar(40) , all_value varchar(30) , reg_date datetime , reg_time datetime , normal varchar(20) , cancel varchar(20) , escape_value varchar(20) , 
+
+doctor varchar(80) , bht_num varchar(40) , originial_bht_no varchar(30) , p_name_title varchar(20) , f_name varchar(30) , m_name varchar(30) , 
+
+l_name varchar(30) , tpa_name varchar(50) , care_of varchar(50) , care_of_name varchar(30) , age int , age_yn varchar(5), gender varchar(10) , 
+
+reg_amt int , pid_num varchar(40) , policy_no varchar(40) , address varchar(200) , address1 varchar(200) , district varchar(50) , state varchar(50) , 
+
+phone_no varchar(30) , mob_no varchar(40), pro_hsp varchar(40) , blood_grp varchar(30) , drug_Sensitivity varchar(40) , operation varchar(30) ,
+
+ result varchar(30) , disc_date datetime , prov_diagnosis varchar(40) , remark varchar(30) , bed_no int , ward_category varchar(30))
+
+
+updated table of ipd_master
+
+create table ipd_master(bht_no varchar(40) , doctor varchar(50) , pid_no varchar(30) , reg_date datetime , reg_time datetime , p_name varchar(120) , 
+
+mob_no varchar(20) , gender varchar(10) , tpa_name varchar(80) , policy_no varchar(40) , reg_amt int , ward_category varchar(30) ,  bed_no int , 
+
+pro_hsp varchar(40) ,  contact_no varchar(20) , attendent_name varchar(80) , relation varchar(50) , a_contact_no varchar(20) , 
+
+care_of varchar(50) , care_of_name varchar(30) , age int , age_yn varchar(5), address varchar(200)  , district varchar(50) , state varchar(50) , 
+
+alternate_no varchar(20) , f_year varchar(10) , hsp_code varchar(20));
+
+
+
+
+
+
+
+
+
+
+
+
