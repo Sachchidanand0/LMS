@@ -1,0 +1,153 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Library.master.cs" Inherits="Library" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Library Management</title>
+    
+    <style>
+        .zindex{
+            position:relative;
+            z-index:5;
+        }
+   
+    </style>
+
+
+    
+    <%--Bootstrap Css File--%>
+    <link href="Bootstarp/Css/bootstrap.min.css" rel="stylesheet" />
+    <%--DataTable Css File--%>
+<link type="text/css" href="DataTables/DataTables-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%--Font Awesome Css File--%>
+    <link href="fontawesome/fa/css/all.css" rel="stylesheet" />
+    <%--Jquery--%>
+    <script src="Bootstarp/Js/bootstrap.bundle.min.js"></script>
+    <%--Popper.js file--%>
+    <script src="Bootstarp/Js/popper.min.js"></script>
+    <%--Bootstrap Js--%>
+    <script src="Bootstarp/Js/bootstrap.min.js"></script>
+    <%-- Data Table --%>
+    <script type="text/javascript" src="DataTables/DataTables-1.12.1/js/jquery.dataTables.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.12.1/af-2.4.0/b-2.2.3/b-html5-2.2.3/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.12.1/af-2.4.0/b-2.2.3/b-html5-2.2.3/datatables.min.js"></script>
+  
+
+    
+     <%--Custom Css File--%>
+    <link href="Css/StyleSheet.css" rel="stylesheet" />
+    <link href="Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="Css/lib.css" rel="stylesheet" />
+    <%-- Sweet alert --%>
+    <script src="js/popper.js" type="text/javascript">
+    </script>
+    <script src="js/swwetalert.js" type="text/javascript"></script>
+     
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+  
+</head>
+<body onload="loadfunction()" >
+    <form id="form1" runat="server">
+        <div id="preload"></div>
+        <asp:ToolkitScriptManager runat="server"></asp:ToolkitScriptManager>
+       
+      
+     <section class="zindex">
+         <nav class="navbar navbar-expand-lg bg-dark container-fluid  position-fixed">
+             <a href="homepage.aspx" class="navbar-brand nav-link  text-white">
+             <img src="Imgs/booklogo01.png" width="40" height="40" class="img-fluid" />
+                E-Learning  
+                 </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"  aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+              </button>
+             
+
+         <div class="collapse navbar-collapse position-static" id="navbarNav">
+             
+      <ul class="navbar-nav ms-2">
+       <li class="nav-item">
+          <asp:LinkButton href="../default.aspx" class="nav-link text-white au" ID="LinkButton1" runat="server">HOME</asp:LinkButton>
+        </li>
+        </ul>
+         <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <asp:LinkButton  class="nav-link text-white au" ID="vb" runat="server" OnClick="vb_Click">View Book</asp:LinkButton>
+        </li>
+        <li class="nav-item">
+          <asp:LinkButton href="ulogin.aspx " class="nav-link text-white au" ID="ul" runat="server">User Login</asp:LinkButton>
+        </li>
+        <li class="nav-item">
+          <asp:LinkButton href="usignup.aspx" class="nav-link text-white au" ID="su" runat="server">Sign Up</asp:LinkButton>
+        </li>
+                 <li class="nav-item">
+          <asp:LinkButton class="nav-link text-white au" ID="logout" runat="server" Visible="false" OnClick="logout_Click">Logout</asp:LinkButton>
+        </li>
+               <li class="nav-item">
+          <asp:LinkButton class="nav-link text-white au" ID="hello" runat="server" OnClick="huser_Click" Visible="false">Hello User</asp:LinkButton>
+        </li>
+        </ul>
+    </div>
+            
+         </nav>
+     </section>
+           
+
+       <%--  Main Content Placeholder--%>
+        <div>
+           <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+           </asp:ContentPlaceHolder>
+        </div>
+       <%--  Main Content Placeholder--%>
+          
+        <footer>
+            <div id="footer1" class="container-fluid w-auto h-auto footerf" >
+                <div class="row bg-dark text-white h-auto w-auto">
+                    <div class="col-xs-12 col-lg-12 col-sm-12 col-md-12 text-center">
+                        <p class="footp">
+                            <asp:LinkButton runat="server" class="footerlinks text-white" ID="adl" OnClick="adl_Click">Admin Login</asp:LinkButton>
+                            &nbsp;
+                              <asp:LinkButton runat="server" class="footerlinks text-white" ID="am" OnClick="am_Click" Visible="false">Author Management</asp:LinkButton>
+                            &nbsp;
+                              <asp:LinkButton  runat="server" class="footerlinks text-white" ID="pm" OnClick="pm_Click" Visible="false">Publisher Management</asp:LinkButton>
+                            &nbsp;
+                              <asp:LinkButton  runat="server" class="footerlinks text-white" ID="bi" OnClick="bi_Click" Visible="false">Book Inventory</asp:LinkButton>
+                            &nbsp;
+                              <asp:LinkButton runat="server" class="footerlinks text-white" ID="booki" OnClick="booki_Click" Visible="false">Book Issuing</asp:LinkButton>
+                            &nbsp;
+                              <asp:LinkButton runat="server" class="footerlinks text-white" ID="mm" OnClick="mm_Click" Visible="false">Member Management</asp:LinkButton>
+                            &nbsp;
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="footer2" class="container-fluid">
+            <div class="row bg-gradient" >
+            <div class=" col-xs-12 col-sm-12 col-md-12 text-center ">
+            <p>&copy;All Rights Reserved. &nbsp;<a class="footerlinks" href="#" target="_blank">E-Library</a></p>
+                </div>
+                </div>
+                </div>
+        </footer>
+
+        
+    </form>
+    <script>
+        var loader = document.getElementById('preload');
+        setTimeout(() => {
+            
+            loader.style.display = 'none';
+        }, 1000);
+        //function loadfunction() {
+            
+            
+        //}
+    </script>
+</body>
+</html>

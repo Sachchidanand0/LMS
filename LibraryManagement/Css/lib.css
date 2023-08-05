@@ -1,0 +1,227 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.footerlinks {
+    text-decoration: none;
+}
+
+#footer2 {
+    background-color: #000;
+    color: #fff;
+}
+
+    #footer2 a:hover {
+        background-color: aliceblue;
+    }
+
+
+.footerlinks:hover {
+    background-color: aquamarine;
+    color: aliceblue;
+}
+
+
+
+/*form homepage css*/
+
+
+
+
+.sec-content {
+    width: 100%;
+    text-align: center !important;
+    font-size: 4rem !important;
+    color: burlywood;
+}
+
+.feature-section {
+    background-color: aliceblue;
+}
+
+.secondlib {
+    width: 100vw;
+    height: 50vh;
+    opacity: 0.9;
+}
+
+
+.pok {
+    color: aliceblue;
+    font-size: 4.3rem;
+    text-shadow: 1px 1px 2px 0.5px black !important;
+}
+
+/* U login Page*/
+
+/*navebar*/
+.nav-link {
+    border-radius: 5px;
+    transition: 1s;
+}
+
+    .nav-link:hover {
+        transform: translateX(-2px) translateY(-0.5px);
+        box-shadow: 5px 5px 50px white;
+    }
+
+#logout:hover {
+    transition: 0.5s;
+    transform: translateX(-2px) translateY(-0.5px);
+    box-shadow: -5px -5px 50px red;
+}
+
+.footp {
+    height: 5vh;
+    width: auto;
+    text-align: center;
+    line-height: 45px;
+}
+
+.footerlinks {
+    border-radius: 5px;
+    padding: 5px;
+    transition: 1s;
+}
+
+    .footerlinks:hover {
+        text-align: center;
+        transform: translateX(2px) translateY(-5px);
+        box-shadow: 5px 5px 50px white;
+    }
+
+.nav-item {
+    padding: 0.25rem;
+}
+
+/*test the new effict*/
+/* NAVIGATION */
+/*.nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+    .nav ul li {
+        display: inline-block;
+    }
+
+        .nav ul li a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: #aaa;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin: 0 10px;
+            border-radius:11px;
+        }
+
+            .nav ul li a,
+            .nav ul li a:after,
+            .nav ul li a:before {
+                transition: all .5s;
+            }
+
+                .nav ul li a:hover {
+                    color: #555;
+                }
+
+
+ fill 
+
+.nav.fill ul li a {
+    position: relative;
+}
+
+    .nav.fill ul li a:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: '.';
+        color: transparent;
+        background: white;
+        height: 1px;
+        border-radius: 10px;
+    }
+
+
+.nav.fill ul li a {
+    transition: all 2s;
+}
+
+    .nav.fill ul li a:after {
+        text-align: left;
+        content: '.';
+        margin: 0;
+        opacity: 0;
+    }
+
+    .nav.fill ul li a:hover {
+        color: black;
+        background-color:aqua;
+        z-index: 1;
+        
+    }
+
+        .nav.fill ul li a:hover:after {
+            z-index: -10;
+            animation: fill 1s forwards;
+            -webkit-animation: fill 1s forwards;
+            -moz-animation: fill 1s forwards;
+            opacity: 1;
+            
+        }
+
+
+
+
+ Keyframes 
+@keyframes fill {
+    0% {
+        width: 0%;
+        height: 1px;
+    }
+
+    50% {
+        width: 100%;
+        height: 1px;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        background: black;
+    }
+}
+*/
+/*Windows Preload*/
+#preload {
+    width: 100%;
+    height: 100vh;
+    background-color: #4A484B;
+    position: fixed;
+    z-index: 22;
+    background: #4A484B url(../Imgs/load.gif)no-repeat center;
+}
+
+
+.footerf {
+    margin-top: 22vh;
+}
+
+footer {
+    display:block;
+    width: 99.8vw;
+    
+    position: relative;
+    bottom: 0;
+}
